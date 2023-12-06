@@ -1,0 +1,723 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:rgb(1, 1, 23);
+
+}
+ 
+/*
+Below is the main Grid for the whole website
+*/
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url(/fonts/majormonodisplay-regular-webfont.woff2) format('woff2'),
+         url(/fonts/majormonodisplay-regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+.grid-display{
+    display: grid;
+    grid-template-areas: 'all' 'stuff' 'footer';
+    grid-template-columns: auto;
+    grid-template-rows:  100vh 200vh;
+     background-color:rgb(1, 1, 23);
+}
+
+/*
+Grid for Nav bar and Hero
+*/
+.all{
+    display: grid;
+    grid-area: all;
+    grid-template-areas: 'nav' 'main';
+    background-image: url(/img/HeroImg-2-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    overflow-x: hidden;
+}
+
+/*
+Grid for Navbar
+*/
+
+#navbar{
+    display:grid;
+    grid-area: nav;
+    grid-template-areas: 'logo title home contact about movies';
+    height: 10vh;
+    background-color: transparent;
+    font-family: CustomFont;
+    font-size: 2em;
+    grid-gap: 10px;
+    border-bottom:solid ;
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown{
+    display: none;
+}
+
+
+.logo{
+    grid-area: logo;
+    height: 10vh;
+    padding-left: 1%;
+    
+}
+
+.title{
+    grid-area: title;
+    color: azure;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.home,.contact ,.about ,.movies{
+    background-color: transparent;
+    color: azure;
+    font-family: CustomFont;
+    border-radius: 13px; 
+    font-size: 110%;
+    border-style: none;
+}
+
+.home:hover,.contact:hover ,.about:hover ,.movies:hover{
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.home{
+    grid-area: home;
+    height: 10vh;
+   
+}
+
+.contact{
+    grid-area: contact;
+    height: 10vh;
+}
+
+.about{
+    grid-area: about;
+    height: 10vh;
+}
+
+.movies{
+    grid-area: movies;
+    height: 10vh;
+}
+
+/*
+Grid for main Hero
+*/
+.main{
+    display: grid;
+    grid-area: main;
+}
+
+.hero{
+    display: flex;
+   
+
+}
+
+.hero-title{
+    font-family: CustomFont;
+    font-size: 4em; 
+    color:azure;
+    padding-left: 1%;
+}
+
+.hero-p{
+    margin-top: -5%;
+    font-family: CustomFont;
+    font-size: 1em; 
+    color:azure;
+    padding-left: 1%;
+}
+
+.stuff{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-area: stuff;
+    background-color:rgb(1, 1, 23);
+    padding: 5px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+ .box{
+    width: 8vw;
+    height: 43vh;
+    padding: 10px;
+    margin: 10px;
+    background-color: azure;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    flex-basis: 18.5%;
+    overflow: clip;
+}
+
+
+
+.box:focus{
+    transform: scale(1.55);
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: .5vw;
+    height: 31vh;
+    box-shadow: 2px 4px 10px rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+    overflow: clip;
+  } 
+
+ #movie1,#movie2,#movie3,#movie4,#movie5,#movie6,#movie7,#movie8,#movie8,#movie9,#movie10,#movie11,#movie12,#movie13,#movie14,#movie15,#movie16,#movie17,#movie18,#movie19,#movie20{
+    display: flex;
+    position: absolute;
+    width: 16.3vw;
+    height: 100%;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    padding-left: 3px;
+    margin-top: -10px;
+    transition: all 0.3s ease-in-out;
+ }
+ 
+
+#title1,#title2{
+    display: none;
+}
+
+.box:hover{
+    box-shadow: 2px 4px 20px rgb(255, 255, 255);
+    transform: scale(1.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.box:focus:hover{
+    transform: scale(1.55);
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: .5vw;
+    height: 31vh;
+    box-shadow: 2px 4px 10px rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 128.4px;
+    width: 260px;
+    margin-left: -8px;
+    background-color: rgba(0, 0, 0,);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-top: 13px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#trailer2{
+    margin-top: 10px;
+    
+}
+
+#trailer3{
+    margin-top: 10px;
+    
+}
+
+#trailer4,#trailer5,#trailer6,#trailer7,#trailer8,#trailer9,#trailer10,#trailer11,#trailer12,#trailer13,#trailer14,#trailer15,#trailer16,#trailer17,#trailer18,#trailer19,#trailer20{
+    margin-top: 13.5px; 
+}
+
+.movies-text{
+    color:#ffffff;
+    font-size: 10px;
+    position: absolute;
+    display: inline-block;
+    width: 8vw;
+}
+
+.movies-text p{
+    text-align: left;
+    font-size: 7.5px;
+}
+.movies-text h3{
+    text-align: left;
+}
+
+.movies-text h1{
+font-size: 15px;
+}
+
+#btn1{
+    background-image: url("/img/Endgame.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn2{
+    background-image: url("/img/Whiplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn3{
+    background-image: url("/img/Legomovie.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+
+#btn4{
+    background-image: url("/img/Goodwillhunting.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+
+#btn5{
+    background-image: url("/img/Rushhour.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+
+
+#btn6{
+    background-image: url("/img/Spiderman.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn7{
+    background-image: url("/img/Goodfellas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn8{
+    background-image: url("/img/Wolf.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn9{
+    background-image: url("/img/Superbad.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn10{
+    background-image: url("/img/Greenbook.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn11{
+    background-image: url("/img/Pitchperfect.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn12{
+    background-image: url("/img/Leon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn13{
+    background-image: url("/img/Socialnet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+
+#btn14{
+    background-image: url("/img/Pursuit.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+
+#btn15{
+    background-image: url("/img/Moneyball.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+
+
+#btn16{
+    background-image: url("/img/Parasite.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn17{
+    background-image: url("/img/Spirited.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn18{
+    background-image: url("/img/BTF.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn19{
+    background-image: url("/img/Usual.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+#btn20{
+    background-image: url("/img/Walle.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-style: hidden;
+}
+
+
+
+.box:hover{
+    background-color: black;
+    border: none;
+}
+
+
+
+
+@media screen and (max-width: 680px){
+
+    .all{
+        display: grid;
+        grid-area: all;
+        grid-template-areas: 'nav' 'main';
+        background-image: url(/img/HeroImg-2-2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        width: auto;
+        overflow-x: hidden;
+    }
+    
+
+    .home{
+        display: none;
+    }
+
+    .contact{
+        display: none;
+    }
+
+    .about{
+        display: none;
+    }
+
+    .movies{
+        display: none;
+    }
+
+    .title{
+        grid-area: title;
+        color: azure;
+        display: flex;
+        align-items: center;
+        margin-left: 5%;
+        font-size: 30px;
+    }
+
+    .dropdown{
+        grid-area: about;
+        display: block;
+    }
+
+ 
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+
+  .dropdown {
+    display: flex;
+    place-content: center;
+    position: relative;
+  }
+  
+  
+  .dropdown-content {
+    margin-top: 100%;
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+  }
+  
+
+  .dropdown-content a:hover {background-color: rgba(255, 255, 255, 0.208);}
+  
+
+  .dropdown:hover .dropdown-content {display: block;}
+  
+
+  .dropdown:hover .dropbtn {background-color:transparent}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.grid-display{
+    display: grid;
+    grid-template-areas: 'all' 'stuff';
+    grid-template-columns: 100vw;
+    grid-template-rows:  75vh 75vh;
+}
+
+.box{
+    width: 30vw;
+    height: 40vh;
+    padding: 10px;
+    margin: 5px;
+    background-color: azure;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    flex-basis: 80%;
+    overflow: clip;
+}
+
+.stuff{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+body{
+    background-color:rgb(1, 1, 23);
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
+#navbar{
+    font-size: 8px;
+    width: 100vw;
+    grid-gap: 4px;
+}
+
+.hero-p{
+    margin-top: -5%;
+    font-family: CustomFont;
+    color:azure;
+    display: none;
+}
+
+.hero-title{
+    text-align: center;
+    font-size: 40px; 
+    width: 100vw;
+}
+
+#movie1,#movie2,#movie3,#movie4,#movie5,#movie6,#movie7,#movie8,#movie8,#movie9,#movie10,#movie11,#movie12,#movie13,#movie14,#movie15,#movie16,#movie17,#movie18,#movie19,#movie20{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 51vh;
+    border-radius: 15px;
+    background-position: center center;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+ }
+
+ .movies-text{
+    color:#ffffff;
+    position: absolute;
+    display: inline-block;
+}
+
+.movies-text h1{
+    font-size: 25px;
+}
+
+.movies-text p{
+    font-size: 10px;
+   margin-left: 50px;
+   margin-right: 50px;
+}
+
+.movies-text h3{
+    margin-left: 50px;
+   margin-right: 50px;
+}
+
+video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    width: 100vw;
+    margin-left: -30px;
+    background-color: rgba(0, 0, 0,);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-top: 8px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#trailer1{
+    margin-top: 60px;
+    
+}
+
+#trailer2{
+    margin-top: 60px;
+    width: 400px;
+    
+}
+
+#trailer3{
+    margin-top: 60px;
+    margin-left: -30px;
+    width: 400px;
+    
+}
+
+#trailer4,#trailer5,#trailer6,#trailer7,#trailer8,#trailer9,#trailer10,#trailer11,#trailer12,#trailer13,#trailer14,#trailer15,#trailer16,#trailer17,#trailer18,#trailer19,#trailer20{
+    margin-top: 60px;
+    
+}
+
+ .box:focus{
+    transform: scale(3.0);
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 15vw;
+    height: 50vh;
+    box-shadow: 2px 4px 10px rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    border-radius: 15px;
+  } 
+
+  .box:hover{
+    box-shadow: 2px 4px 20px rgb(255, 255, 255);
+    transform: scale(1.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.box:focus:hover{
+    transform: scale(1.2);
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: .5vw;
+    height: 50vh;
+    box-shadow: 2px 4px 10px rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 376px){
+    .title{
+        font-size: 2px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .title{
+        font-size: 20px;
+    }
+}
+
+}
